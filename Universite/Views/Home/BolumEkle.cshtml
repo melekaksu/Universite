@@ -1,0 +1,33 @@
+@model Bolumler
+@{
+    ViewData["Title"] = "BolumEkle";
+}
+
+<h1>BolumEkle</h1>
+
+<form asp-action="BolumEkle" asp-controller="Home" method="post">
+    <div class="mb-3">
+        <label asp-for="BolumAd" class="form-label">Bölüm Adı</label>
+        <input class="form-control" asp-for="BolumAd">
+    </div>
+    <div class="mb-3">
+        <label asp-for="FakulteId" class="form-label">Fakülte</label>
+        <select class="form-control" asp-items="@ViewBag.Fakulteler" asp-for="FakulteId"></select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Ekle</button>
+</form>
+
+
+@* <form asp-action="BolumEkle" asp-controller="Home" method="post">
+<div class="mb-3">
+<label asp-for="BolumAd" class="form-label">Bölüm Adı</label>
+<input class="form-control" asp-for="BolumAd">
+</div>
+<div class="mb-3">
+<label class="form-label" asp-for="BolumId" class="form-label">Bolum Adı</label>
+<select class="form-control" asp-items="@ViewBag.fakulteler" asp-for="BolumId"></select>
+</div>
+
+<button type="submit" class="btn btn-primary">Ekle</button>
+</form> *@

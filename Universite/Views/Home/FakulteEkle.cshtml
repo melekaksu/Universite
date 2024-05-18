@@ -1,0 +1,22 @@
+@model Fakulteler
+@{
+    ViewData["Title"] = "FakulteEkle";
+}
+
+<h1>FakulteEkle</h1>
+
+<form asp-action="FakulteEkle" asp-controller="Home" method="post">
+    <div class="mb-3">
+        <label asp-for="FakulteAd" class="form-label">Fakülte Adı</label>
+        <input class="form-control" asp-for="FakulteAd">
+    </div>
+    <button type="submit" class="btn btn-primary">Ekle</button>
+</form>
+
+@* <form asp-action="FakulteEkle" asp-controller="Home" method="post">
+<div class="mb-3">
+<label asp-for="FakulteAd" class="form-label">Fakülte Adı</label>
+<input class="form-control" asp-for="FakulteAd">
+</div>
+<button type="submit" class="btn btn-primary">Ekle</button>
+</form> *@
